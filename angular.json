@@ -89,9 +89,18 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
-  "defaultProject": "origin-take-home-assignment"
+  "defaultProject": "origin-take-home-assignment",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
