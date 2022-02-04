@@ -1,0 +1,23 @@
+@import 'variables';
+
+.c-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+
+    &-logo {
+      margin-left: 3rem;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    background-color: $blue-gray-10;
+  }
+}
