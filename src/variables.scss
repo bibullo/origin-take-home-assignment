@@ -1,0 +1,29 @@
+$white: #fff;
+$blue-gray-10: #f4f8fa;
+$blue-gray-100: #cbd5dc;
+$blue-gray-300: #8a9ca9;
+$blue-gray-400: #708797;
+$blue-gray-600: #4d6475;
+$blue-gray-900: #1e2a32;
+$brand-color-primary: #1b31a8;
+$brand-color-secondary: #0079ff;
+
+@mixin heading-typography {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+@mixin heading-bold-typography {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+@mixin typography {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin bold-typography {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
