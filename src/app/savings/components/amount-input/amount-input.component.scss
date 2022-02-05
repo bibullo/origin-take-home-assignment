@@ -1,0 +1,11 @@
+@import 'variables';
+
+.c-amount-input {
+  @include small-border;
+  @include heading-bold-typography;
+  font-size: $large-font-size;
+  color: $blue-gray-600;
+  width: 205px;
+  padding: 11px 0 11px 40px;
+  background: url('/assets/icons/dollar-sign.svg') no-repeat scroll 9px 13px;
+}
