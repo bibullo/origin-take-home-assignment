@@ -6,6 +6,15 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./savings/savings.module').then(
+            (module) => module.SavingsModule
+          ),
+      },
+    ],
   },
 ];
 
