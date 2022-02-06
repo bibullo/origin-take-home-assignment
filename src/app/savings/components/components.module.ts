@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AmountInputComponent } from './amount-input/amount-input.component';
+import { MonthYearPickerComponent } from './month-year-picker/month-year-picker.component';
 
 @NgModule({
-  declarations: [AmountInputComponent],
+  declarations: [AmountInputComponent, MonthYearPickerComponent],
   imports: [CommonModule, ReactiveFormsModule],
-  exports: [AmountInputComponent],
+  exports: [AmountInputComponent, MonthYearPickerComponent],
 })
 export class ComponentsModule {}

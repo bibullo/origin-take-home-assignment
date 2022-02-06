@@ -1,0 +1,22 @@
+<div class="c-month-year-picker">
+  <img
+    class="c-month-year-picker__left-arrow"
+    src="./assets/icons/chevron-left.svg"
+    alt="left arrow"
+    (click)="changeMonth(-1)"
+  />
+  <div class="c-month-year-picker__dates">
+    <p class="c-month-year-picker__dates--month">
+      {{ monthNames[reachDate.getMonth()] }}
+    </p>
+    <p class="c-month-year-picker__dates--year">
+      {{ reachDate.getFullYear() }}
+    </p>
+  </div>
+  <img
+    class="c-month-year-picker__right-arrow"
+    src="./assets/icons/chevron-right.svg"
+    alt="right arrow"
+    (click)="changeMonth(1)"
+  />
+</div>

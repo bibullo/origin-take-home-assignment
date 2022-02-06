@@ -1,0 +1,29 @@
+@import 'variables';
+
+.c-month-year-picker {
+  @include small-border;
+  display: flex;
+  padding: $extra-tiny-spacing $extra-small-spacing;
+
+  &__left-arrow,
+  &__right-arrow {
+    cursor: pointer;
+  }
+
+  &__dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 $large-spacing;
+    gap: $extra-tiny-spacing;
+    min-width: 87px;
+
+    &--month {
+      @include bold-typography;
+    }
+
+    &--year {
+      color: $blue-gray-400;
+    }
+  }
+}
