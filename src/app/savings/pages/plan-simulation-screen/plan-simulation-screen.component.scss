@@ -13,6 +13,11 @@
     color: $brand-color-primary;
     margin-bottom: $small-spacing;
 
+    @media (max-width: 600px) {
+      font-size: $small-font-size;
+      margin-top: $medium-spacing;
+    }
+
     span {
       @include bold-typography;
     }
@@ -20,15 +25,23 @@
 
   &__content {
     border-radius: $medium-border-radius;
-    padding: $large-spacing $huge-spacing $huge-spacing;
+    padding: $medium-spacing $huge-spacing $huge-spacing;
     background-color: $white;
     box-shadow: 0 $tiny-spacing $medium-spacing rgba(67, 75, 80, 0.08);
     max-width: 480px;
+
+    @media (max-width: 600px) {
+      padding: $small-spacing $small-spacing $large-spacing;
+    }
   }
 
   &__heading {
     display: flex;
     margin-bottom: $small-spacing;
+
+    @media (max-width: 600px) {
+      margin-bottom: $extra-small-spacing;
+    }
 
     &-texts {
       display: flex;
@@ -41,11 +54,21 @@
         @include heading-bold-typography;
         font-size: $large-font-size;
         color: $blue-gray-900;
+
+        @media (max-width: 600px) {
+          font-size: $medium-font-size;
+        }
       }
 
       &--label {
         font-size: $extra-small-font-size;
         color: $blue-gray-400;
+        margin: $extra-tiny-spacing 0;
+
+        @media (max-width: 600px) {
+          font-size: $tiny-font-size;
+          margin: 0 0 $extra-tiny-spacing;
+        }
       }
     }
   }
@@ -54,11 +77,24 @@
     display: flex;
     gap: $tiny-spacing;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     &-label {
       font-size: $tiny-font-size;
       color: $blue-gray-900;
-      margin-bottom: $extra-tiny-spacing * 2;
+      margin-bottom: $further-tiny-spacing;
+
+      @media (max-width: 600px) {
+        font-size: $extra-tiny-font-size;
+        margin-bottom: $extra-tiny-spacing;
+      }
     }
+  }
+
+  &__amount-input {
+    display: flex;
   }
 
   &__results {
@@ -70,17 +106,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: $small-spacing $medium-spacing;
+      padding: $small-spacing $medium-spacing $tiny-spacing;
+
+      @media (max-width: 600px) {
+        padding: $small-spacing $small-spacing;
+      }
 
       &--label {
         font-size: $medium-font-size;
         color: $blue-gray-900;
+
+        @media (max-width: 600px) {
+          font-size: $small-font-size;
+        }
       }
 
       &--value {
         @include heading-bold-typography;
         font-size: $huge-font-size;
         color: $brand-color-secondary;
+
+        @media (max-width: 600px) {
+          font-size: $large-font-size;
+        }
       }
     }
 
@@ -91,6 +139,10 @@
       &--text {
         font-size: $extra-tiny-font-size;
         color: $blue-gray-900;
+
+        @media (max-width: 600px) {
+          text-align: center;
+        }
 
         span {
           @include bold-typography;
@@ -113,6 +165,10 @@
       width: 66%;
       color: $white;
       background-color: $brand-color-primary;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 }

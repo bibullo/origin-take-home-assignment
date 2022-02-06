@@ -4,6 +4,11 @@
   @include small-border;
   display: flex;
   padding: $extra-tiny-spacing $extra-small-spacing;
+  justify-content: space-between;
+
+  @media (max-width: 600px) {
+    padding: $further-tiny-spacing $extra-small-spacing;
+  }
 
   &__left-arrow,
   &__right-arrow {
@@ -17,6 +22,11 @@
     padding: 0 $large-spacing;
     gap: $extra-tiny-spacing;
     min-width: 87px;
+    font-size: $extra-small-font-size;
+
+    @media (max-width: 600px) {
+      font-size: $tiny-font-size;
+    }
 
     &--month {
       @include bold-typography;

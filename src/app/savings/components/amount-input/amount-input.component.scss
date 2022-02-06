@@ -8,4 +8,11 @@
   width: 205px;
   padding: 11px 0 11px 40px;
   background: url('/assets/icons/dollar-sign.svg') no-repeat scroll 9px 13px;
+  flex-grow: 1;
+
+  @media (max-width: 600px) {
+    font-size: $medium-font-size;
+    padding: 15px 0 15px 40px;
+    background: url('/assets/icons/dollar-sign.svg') no-repeat scroll 9px 15px;
+  }
 }
