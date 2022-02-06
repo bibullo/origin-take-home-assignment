@@ -1,0 +1,118 @@
+@import 'variables';
+
+.c-plan-simulation-screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    @include typography;
+    font-size: $medium-font-size;
+    color: $brand-color-primary;
+    margin-bottom: $small-spacing;
+
+    span {
+      @include bold-typography;
+    }
+  }
+
+  &__content {
+    border-radius: $medium-border-radius;
+    padding: $large-spacing $huge-spacing $huge-spacing;
+    background-color: $white;
+    box-shadow: 0 $tiny-spacing $medium-spacing rgba(67, 75, 80, 0.08);
+    max-width: 480px;
+  }
+
+  &__heading {
+    display: flex;
+    margin-bottom: $small-spacing;
+
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 0.7rem;
+      padding: 0.3rem;
+
+      &--goal {
+        @include heading-bold-typography;
+        font-size: $large-font-size;
+        color: $blue-gray-900;
+      }
+
+      &--label {
+        font-size: $extra-small-font-size;
+        color: $blue-gray-400;
+      }
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    gap: $tiny-spacing;
+
+    &-label {
+      font-size: $tiny-font-size;
+      color: $blue-gray-900;
+      margin-bottom: $extra-tiny-spacing * 2;
+    }
+  }
+
+  &__results {
+    @include medium-border;
+    overflow: hidden;
+    margin-top: $small-spacing;
+
+    &-monthly {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: $small-spacing $medium-spacing;
+
+      &--label {
+        font-size: $medium-font-size;
+        color: $blue-gray-900;
+      }
+
+      &--value {
+        @include heading-bold-typography;
+        font-size: $huge-font-size;
+        color: $brand-color-secondary;
+      }
+    }
+
+    &-description {
+      background-color: $blue-gray-10;
+      padding: $small-spacing $medium-spacing;
+
+      &--text {
+        font-size: $extra-tiny-font-size;
+        color: $blue-gray-900;
+
+        span {
+          @include bold-typography;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    margin-top: $medium-spacing;
+
+    &-button {
+      @include button-border;
+      @include bold-typography;
+      font-size: $extra-small-font-size;
+      cursor: pointer;
+      height: 3rem;
+      width: 66%;
+      color: $white;
+      background-color: $brand-color-primary;
+    }
+  }
+}

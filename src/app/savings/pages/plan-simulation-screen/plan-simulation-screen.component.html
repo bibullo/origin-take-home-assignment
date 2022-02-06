@@ -1,0 +1,72 @@
+<div class="c-plan-simulation-screen">
+  <h1 class="c-plan-simulation-screen__title">
+    Let's plan your <span>saving goal.</span>
+  </h1>
+
+  <section class="c-plan-simulation-screen__content">
+    <div class="c-plan-simulation-screen__heading">
+      <img src="./assets/icons/buy-a-house.svg" alt="house" />
+      <div class="c-plan-simulation-screen__heading-texts">
+        <h2 class="c-plan-simulation-screen__heading-texts--goal">
+          Buy a house
+        </h2>
+        <p class="c-plan-simulation-screen__heading-texts--label">
+          Saving goal
+        </p>
+      </div>
+    </div>
+
+    <div class="c-plan-simulation-screen__inputs">
+      <div>
+        <p class="c-plan-simulation-screen__inputs-label">Total amount</p>
+        <origin-amount-input
+          [amount]="amount"
+          class="c-plan-simulation-screen__amount-input"
+        ></origin-amount-input>
+      </div>
+
+      <div>
+        <p class="c-plan-simulation-screen__inputs-label">Reach goal by</p>
+        <origin-month-year-picker
+          [initialDate]="initialDate"
+          [(reachDate)]="reachDate"
+          (reachDateChange)="setVariables()"
+          [monthNames]="monthNames"
+          class="c-plan-simulation-screen__month-year-picker"
+        ></origin-month-year-picker>
+      </div>
+    </div>
+
+    <div class="c-plan-simulation-screen__results">
+      <div class="c-plan-simulation-screen__results-monthly">
+        <p class="c-plan-simulation-screen__results-monthly--label">
+          Monthly amount
+        </p>
+        <h3 class="c-plan-simulation-screen__results-monthly--value">
+          {{ monthlyAmount | currency: 'USD':'symbol-narrow':'1.2' }}
+        </h3>
+      </div>
+
+      <div class="c-plan-simulation-screen__results-description">
+        <p class="c-plan-simulation-screen__results-description--text">
+          You're planning
+          <span>{{ monthlyLabel }}</span> to reach your
+          <span class="c-plan-simulation-screen__results-description--amount">
+            {{
+              (amount.value ? amount.value : 0)
+                | currency: 'USD':'symbol-narrow':'1.0'
+            }}
+          </span>
+          goal by
+          <span>
+            {{ reachDateLabel }}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="c-plan-simulation-screen__submit">
+      <button class="c-plan-simulation-screen__submit-button">Confirm</button>
+    </div>
+  </section>
+</div>
