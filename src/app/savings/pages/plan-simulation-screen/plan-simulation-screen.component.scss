@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 600px) {
+    justify-content: unset;
+  }
+
   &__title {
     @include typography;
     font-size: $medium-font-size;
