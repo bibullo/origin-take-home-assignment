@@ -6,13 +6,19 @@
   flex-direction: column;
 
   &__header {
-    height: 5rem;
     display: flex;
     align-items: center;
     background-color: $white;
 
     &-logo {
-      margin-left: 3rem;
+      padding: $small-spacing 3.5rem;
+
+      @media (max-width: 600px) {
+        height: 24px;
+        width: 75px;
+
+        padding: $tiny-spacing;
+      }
     }
   }
 
